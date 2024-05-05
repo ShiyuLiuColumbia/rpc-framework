@@ -9,7 +9,7 @@ import shiyu.liu.HelloService;
 @NoArgsConstructor
 public class HelloServiceImpl implements HelloService {
     @Override
-    public String Hello(Hello hello) {
+    public String hello(Hello hello) {
         log.info("Received hello message: {}", hello);
         final String response = "Received hello message: " + hello.getMessage();
         return response;
