@@ -13,6 +13,7 @@ import shiyu.liu.socket.client.SocketClientV3;
 import shiyu.liu.socket.handler.SocketRequestHandlerV1;
 import shiyu.liu.socket.server.SocketServerV1;
 import shiyu.liu.socket.server.SocketServerV2;
+import shiyu.liu.socket.server.SocketServerV3;
 
 import java.lang.reflect.InvocationHandler;
 
@@ -51,6 +52,15 @@ public class SocketModule extends AbstractModule {
                                                  final KryoSerializerV1 kryoSerializerV1) {
         return new SocketServerV2(helloService, requestHandler, kryoSerializerV1);
     }
+
+    @Provides
+    @Singleton
+    public SocketServerV3 providerSocketServerV3(final HelloService helloService,
+                                                 final SocketRequestHandlerV1 requestHandler,
+                                                 final KryoSerializerV1 kryoSerializerV1) {
+        return new SocketServerV3(helloService, requestHandler, kryoSerializerV1);
+    }
+
 
     @Provides
     @Singleton

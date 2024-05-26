@@ -29,7 +29,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>shiyu.liu.SocketClientMainV3</mainClass>
+                            <mainClass>shiyu.liu.SocketClientMainV4</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
